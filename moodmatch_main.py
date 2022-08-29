@@ -7,5 +7,5 @@ emotions = ['Happy', 'Sad']
 selected_emotion = st.selectbox('Choose', emotions)
 
 
-st.header('Would you rather like a song or a quote to lift your emotions?')
+st.header('Would you rather like a song or a quote?')
 
