@@ -12,6 +12,7 @@ selected_choice = st.selectbox('Pick', ['Song','Quote'])
 
 if(selected_choice=='Quote'):
   data_load_state=st.text("Loading the perfect Quote for you . . . ")
+  st.spinner()
   time.sleep(5)
   
   quote =  ' "The best revenge is not to be like that" - Marcus Aurelius '
