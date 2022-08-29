@@ -1,5 +1,4 @@
 import streamlit as st
-from time import *
 st.title("Whats your Mood . . ?")
 
 
