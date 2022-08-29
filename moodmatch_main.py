@@ -1,6 +1,7 @@
 import streamlit as st
-st.title("Whats your Mood . . ?")
+import time
 
+st.title("Whats your Mood . . ?")
 
 emotions = ['Happy', 'Sad']
 selected_emotion = st.selectbox('Choose', emotions)
@@ -11,6 +12,7 @@ selected_choice = st.selectbox('Pick', ['Song','Quote'])
 
 if(selected_choice=='Quote'):
   data_load_state=st.text("Loading the perfect Quote for you . . . ")
-  st.balloons()
+  time.sleep(5)
+  
   quote =  ' "The best revenge is not to be like that" - Marcus Aurelius '
   st.subheader(quote)
