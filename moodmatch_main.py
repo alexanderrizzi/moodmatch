@@ -12,6 +12,7 @@ selected_choice = st.selectbox('Pick', ['Song','Quote'])
 
 if(selected_choice=='Quote'):
   data_load_state=st.text("Loading the perfect Quote for you")
+  quote =  ' "The best revenge is not to be like that" - Marcus Aurelius '
   data_load_state.text("Loading data...done")
   
-  st.subheader(' "The best revenge is not to be like that" - Marcus Aurelius')
+  st.subheader(quote)
