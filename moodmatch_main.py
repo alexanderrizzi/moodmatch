@@ -6,5 +6,6 @@ st.title("Whats your Mood . . ?")
 emotions = ['Happy', 'Sad']
 selected_emotion = st.selectbox('Choose', emotions)
 
-input =  selected_emotion
-st.text(input)
+
+st.header('Would you rather like a song or a quote to lift your emotions?')
+
