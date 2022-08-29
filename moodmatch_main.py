@@ -13,7 +13,4 @@ selected_choice = st.selectbox('Pick', ['Song','Quote'])
 if(selected_choice=='Quote'):
   data_load_state=st.text("Loading the perfect Quote for you . . . ")
   quote =  ' "The best revenge is not to be like that" - Marcus Aurelius '
-  with st.spinner(text='In progress'):
-    time.sleep(5)
-    st.success('Done')
   st.subheader(quote)
