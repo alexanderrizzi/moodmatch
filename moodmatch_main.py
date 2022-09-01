@@ -34,5 +34,5 @@ dict1 = {
   "I dont know": 11
 }
   
-if(dict1(selected_mood)<12):
+if(dict1[selected_mood]<12):
   st.text("ss")
