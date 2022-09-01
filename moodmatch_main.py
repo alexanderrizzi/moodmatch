@@ -18,9 +18,9 @@ if(selected_mood=='Quote'):
 quotes=pd.read_csv('quotesDB.csv')
 
 for i in range(0,11):
-  st.text (quotes['Rating'][1][i])
-
-  dict1 = {
+  st.text (quotes['Rating'][1])
+  
+dict1 = {
   "Happy": 0,
   "Sad": 1,
   "Disgust": 2 ,
@@ -35,5 +35,5 @@ for i in range(0,11):
   "I dont know": 11
 }
   
-if (thisdict(selected_mood)<12):
+if(thisdict(selected_mood)<12):
   st.text("ss")
