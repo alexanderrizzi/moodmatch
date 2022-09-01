@@ -44,7 +44,7 @@ if(dict1[selected_mood]<11):
     if(len(arr)==1): quote= quotes["List"][arr[0]]
     else: 
         non_zero = arr[arr!=0]
-        rand=random.choice(non_zero)
+        rand=np.random.choice(non_zero)
         quote= quotes["List"][rand]
         
 if(selected_choice=='Quote'):
