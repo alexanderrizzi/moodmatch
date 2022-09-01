@@ -11,7 +11,7 @@ selected_emotion = st.selectbox('Choose', moods)
 st.header('Would you rather like a song or a quote?')
 selected_mood = st.selectbox('Pick', ['Song','Quote'])
 
-if(selected_choice=='Quote'):
+if(selected_mood=='Quote'):
   with st.spinner(text='Loading the perfect Quote for you . . .'):
    time.sleep(4)
 
