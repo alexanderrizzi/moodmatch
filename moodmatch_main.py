@@ -32,6 +32,7 @@ dict1 = {
 
 if(dict1[selected_mood]<11):
   max=0
+  k=0
   arr=[0]*6
   for i in range(0,5):
     # for j in np.arange(0,22,2):
