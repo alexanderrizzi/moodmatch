@@ -41,7 +41,7 @@ if(dict1[selected_mood]<11):
             max=int(quotes["Rating"][i][dict1[selected_mood]])
             arr[k]=i
             k+=1
-    arr=arr[arr!=0]
+    arr=[arr!=0]
     st.text(arr)
     if(len(arr)==1): quote= quotes["List"][arr[0]]
     elif(k==0): quote="SHuld fgrue ut"
