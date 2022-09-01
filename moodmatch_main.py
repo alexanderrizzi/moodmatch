@@ -18,5 +18,5 @@ if(selected_choice=='Quote'):
 quotes=pd.read_csv('quotesDB.csv')
 
 for i in range(0,11):
-  st.text (quotes['Rating'][0][i])
+  st.text (quotes['Rating'][1][i])
 
