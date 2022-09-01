@@ -23,10 +23,10 @@ for i in range(0,11):
   dict1 = {
   "Happy": 0,
   "Sad": 1,
-  "Disgust": 2
+  "Disgust": 2 ,
   "Afraid": 3,
   "Angry": 4,
-  "Grateful": 5
+  "Grateful": 5, 
   "Nostalgic": 6,
   "Empathic": 7,
   "Romantic": 8
