@@ -17,7 +17,7 @@ if(selected_choice=='Quote'):
 
 quotes=pd.read_csv('quotesDB.csv')
 
-st.text (quotes['Rating'][1])
+st.text (quotes['Rating'])
   
 dict1 = {
   "Happy": 0,
@@ -35,4 +35,4 @@ dict1 = {
 }
   
 if(dict1[selected_mood]<11):
- 
+ st.text("ss")
