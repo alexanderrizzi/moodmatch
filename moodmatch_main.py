@@ -52,3 +52,4 @@ if(selected_choice=='Quote'):
   with st.spinner(text='Loading the perfect Quote for you . . .'):
    time.sleep(4)
 st.subheader(quote)
+
