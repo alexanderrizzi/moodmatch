@@ -1,6 +1,7 @@
 import streamlit as st
 import time
 import pandas as pd
+import numpy as np
 
 st.title("How are You feeling Today?")
 
