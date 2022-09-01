@@ -30,7 +30,7 @@ dict1 = {
 }
 
 
-if(dict1[selected_mood]<11):
+if(dict1[selected_mood]<22):
     max=0
     k=0
     arr=np.zeros(6)
