@@ -41,12 +41,14 @@ if(dict1[selected_mood]<11):
             max=int(quotes["Rating"][i][dict1[selected_mood]])
             arr[k]=i
             k+=1
+    st.text(arr)
     if(len(arr)==1): quote= quotes["List"][arr[0]]
     elif(k==0): quote="SHuld fgrue ut"
-    else: 
+    else: quote="SHuld do smth"
+   ''' else: 
         non_zero = arr[arr!=0]
         rand=np.random.choice(non_zero)
-        quote= quotes["List"][rand]
+        quote= quotes["List"][rand]'''
         
 if(selected_choice=='Quote'):
   with st.spinner(text='Loading the perfect Quote for you . . .'):
