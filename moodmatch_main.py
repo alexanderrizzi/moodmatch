@@ -29,19 +29,20 @@ dict1 = {
   "I dont know": 22
 }
 
+
 if(dict1[selected_mood]<11):
-  max=0
-  k=0
-  arr=[0]*6
-  for i in range(0,5):
+    max=0
+    k=0
+    arr=[0]*6
+    for i in range(0,5):
     # for j in np.arange(0,22,2):
-    if(int(quotes["Rating"][i][dict1[selected_mood]]) > max): 
-        max=int(quotes["Rating"][i][dict1[selected_mood]])
-        arr[k]=i
-        k+=1
-   if(len(arr)==1): quote= quotes["List"][arr[0]]
-   elif([k==0]): quote="SHuld fgrue ut"
-   else: 
+        if(int(quotes["Rating"][i][dict1[selected_mood]]) > max): 
+            max=int(quotes["Rating"][i][dict1[selected_mood]])
+            arr[k]=i
+            k+=1
+    if(len(arr)==1): quote= quotes["List"][arr[0]]
+    elif([k==0]): quote="SHuld fgrue ut"
+    else: 
         non_zero = arr[arr!=0]
         rand=np.random.choice(non_zero)
         quote= quotes["List"][rand]
