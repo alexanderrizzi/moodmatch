@@ -31,12 +31,12 @@ dict1 = {
 
 
 if(dict1[selected_mood]<22):
-    max=0
+    max=-1
     k=0
     arr=np.zeros(6)
     for i in range(0,5):
     # for j in np.arange(0,22,2):
-        if(int(quotes["Rating"][i][dict1[selected_mood]]) > max):
+        if(int(quotes["Rating"][i][dict1[selected_mood]]) >= max):
             #st.text(quotes["Rating"][i][dict1[selected_mood]])
             max=int(quotes["Rating"][i][dict1[selected_mood]])
             arr[k]=i
