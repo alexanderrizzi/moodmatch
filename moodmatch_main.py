@@ -4,7 +4,7 @@ import pandas as pd
 
 st.title("How are You feeling Today?")
 
-moods = ['Happy','Sad','Disgust','Afraid','Angry','Grateful','Nostalgic','Empathic','Romantic','Inspired','Broken']
+moods = ['Happy','Sad','Disgust','Afraid','Angry','Grateful','Nostalgic','Empathic','Romantic','Inspired','Broken','I dont know']
 selected_emotion = st.selectbox('Choose', moods)
 
 
@@ -13,11 +13,9 @@ selected_choice = st.selectbox('Pick', ['Song','Quote'])
 
 if(selected_choice=='Quote'):
   with st.spinner(text='Loading the perfect Quote for you . . .'):
-   time.sleep(5)
+   time.sleep(4)
 
 quotes=pd.read_csv('quotesDB.csv')
 
-st.subheader(quotes['List'][1])
-st.text ('-')
-st.subheader(quotes['Author'][1])
-      
+st.text (quotes['Rating'][2][1])
+
