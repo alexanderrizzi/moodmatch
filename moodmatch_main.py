@@ -35,8 +35,8 @@ if(dict1[selected_mood]<11):
   arr=[0]*6
   for i in range(0,5):
     # for j in np.arange(0,22,2):
-    if(Rating[i][dict1[selected_mood]] > max): 
-        max=Rating[i][dict1[selected_mood]]
+    if(quotes["Rating"][i][dict1[selected_mood]] > max): 
+        max=quotes["Rating"][i][dict1[selected_mood]
         arr[k]=i
         k+=1
     if(len(arr)==1): quote= quotes["List"][arr[0]]
