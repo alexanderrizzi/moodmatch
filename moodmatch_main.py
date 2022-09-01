@@ -40,7 +40,7 @@ if(dict1[selected_mood]<11):
         arr[k]=i
         k+=1
     if(len(arr)==1): quote= quotes["List"][arr[0]]
-    elif([arr==0]): quote="SHuld fgrue ut"
+    elif([k==0]): quote="SHuld fgrue ut"
     else: 
         non_zero = arr[arr!=0]
         rand=np.random.choice(non_zero)
