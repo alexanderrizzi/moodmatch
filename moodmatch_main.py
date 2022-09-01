@@ -13,8 +13,6 @@ st.header('Would you rather like a song or a quote?')
 selected_choice = st.selectbox('Pick', ['Song','Quote'])
 
 quotes=pd.read_csv('quotesDB.csv')
-
-st.text (quotes['Rating'][0][3])
   
 dict1 = {
   "Happy": 0,
