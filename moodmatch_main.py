@@ -29,7 +29,7 @@ for i in range(0,11):
   "Grateful": 5, 
   "Nostalgic": 6,
   "Empathic": 7,
-  "Romantic": 8
+  "Romantic": 8,
   "Inspired": 9,
   "Broken": 10,
   "I dont know": 11
