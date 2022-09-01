@@ -35,4 +35,4 @@ dict1 = {
 }
   
 if(dict1[selected_mood]<11):
- st.text("ss")
+  st.text("ss")
