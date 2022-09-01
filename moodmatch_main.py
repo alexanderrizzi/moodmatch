@@ -18,5 +18,6 @@ if(selected_choice=='Quote'):
 quotes=pd.read_csv('quotesDB.csv')
 
 st.subheader(quotes['List'][1])
-        
-    
+st.text ('-')
+st.subheader(quotes['Author'][1])
+      
