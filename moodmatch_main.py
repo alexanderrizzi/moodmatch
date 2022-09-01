@@ -17,7 +17,7 @@ if(selected_choice=='Quote'):
 
 quotes=pd.read_csv('quotesDB.csv')
 
-st.text (quotes['Rating'])
+st.text (quotes['Rating'][0])
   
 dict1 = {
   "Happy": 0,
