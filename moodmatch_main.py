@@ -43,10 +43,9 @@ if(dict1[selected_mood]<11):
         k+=1
     if(len(arr)==1): quote= quotes["List"][arr[0]]
     else: 
-        rng = np.random.default_rng() # doing this is recommended by numpy
         non_zero = arr[arr!=0]
-        rand=rng.choice(non_zero, 1, replace=False)
-        quote= quotes["List"][arr[rand]]
+        rand=random.choice(non_zero)
+        quote= quotes["List"][rand]
         
 if(selected_choice=='Quote'):
   with st.spinner(text='Loading the perfect Quote for you . . .'):
