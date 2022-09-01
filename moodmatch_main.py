@@ -34,7 +34,7 @@ if(dict1[selected_mood]<22):
     max=-1
     k=0
     arr=np.zeros(6)
-    for i in range(0,5):
+    for i in range(0,6):
     # for j in np.arange(0,22,2):
         if(int(quotes["Rating"][i][dict1[selected_mood]]) >= max):
             #st.text(quotes["Rating"][i][dict1[selected_mood]])
