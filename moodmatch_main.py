@@ -2,6 +2,8 @@ import streamlit as st
 import time
 import pandas as pd
 import numpy as np
+import math
+import random
 
 st.title("How are You feeling Today?")
 
@@ -31,27 +33,24 @@ dict1 = {
 
 
 if(dict1[selected_mood]<22):
-    max=-1
-    k=0
+    max=-math.inf
     arr=np.zeros(6)
     for i in range(0,6):
     # for j in np.arange(0,22,2):
-        if(int(quotes["Rating"][i][dict1[selected_mood]]) >= max):
+        if(int(quotes["Rating"][i][dict1[selected_mood]]) > max):
             #st.text(quotes["Rating"][i][dict1[selected_mood]])
             max=int(quotes["Rating"][i][dict1[selected_mood]])
-            arr[k]=i
-            k+=1
+            arr[i]=i
+            
     arr=arr[arr==max]
-    st.text(arr)
-    if(len(arr)==1): quote= quotes["List"][arr[0]]
-    elif(k==0): quote="SHuld fgrue ut"
+   # st.text(arr)
+    if(len(arr)==1): quote= quotes["List"][arr[0]]    
     else: 
-        non_zero = arr
-        rand=np.random.choice(non_zero)
-        quote= quotes["List"][rand]
+        rnd=random.randint(1,len(arr))
+        quote= quotes["List"][rnd]
         
 if(selected_choice=='Quote'):
   with st.spinner(text='Loading the perfect Quote for you . . .'):
    time.sleep(4)
-st.subheader(quote)
+  st.subheader(quote)
 
