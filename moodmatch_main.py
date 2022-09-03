@@ -40,7 +40,7 @@ if(dict1[selected_mood]<22):
             st.text(quotes["Rating"][i][dict1[selected_mood]])
             max=int(quotes["Rating"][i][dict1[selected_mood]])
             arr[i]=i
-            
+    st.text(max) 
     arr=arr[arr==max]
     st.text(arr)
     if(len(arr)==1): quote= quotes["List"][arr[0]]    
