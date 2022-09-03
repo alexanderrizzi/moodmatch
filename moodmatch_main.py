@@ -43,7 +43,7 @@ if(dict1[selected_mood]<22):
             arr[i]=i
             
     arr=arr[arr==max]
-   # st.text(arr)
+    st.text(arr)
     if(len(arr)==1): quote= quotes["List"][arr[0]]    
     else: 
         rnd=random.randint(1,len(arr))
@@ -51,6 +51,6 @@ if(dict1[selected_mood]<22):
         
 if(selected_choice=='Quote'):
   with st.spinner(text='Loading the perfect Quote for you . . .'):
-   time.sleep(4)
+   time.sleep(2)
   st.subheader(quote)
 
