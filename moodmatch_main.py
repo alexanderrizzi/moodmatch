@@ -11,8 +11,8 @@ moods = ['Happy','Sad','Disgust','Afraid','Angry','Grateful','Nostalgic','Empath
 selected_mood = st.selectbox('Choose', moods)
 
 
-st.header('Would you rather like a song or a quote?')
-selected_choice = st.selectbox('Pick', ['Song','Quote'])
+#st.header('Would you rather like a song or a quote?')
+#selected_choice = st.selectbox('Pick', ['Song','Quote'])
 
 quotes=pd.read_csv('quotesDB.csv')
   
@@ -49,13 +49,13 @@ if(dict1[selected_mood]<22):
     pos_arr=np.delete(pos_arr,del_arr)
     #rating_arr=rating_arr[rating_arr==max]
     #st.text(pos_arr)
-    if(len(pos_arr)==1) :
-      quote=quotes["List"][pos_arr[0]]
-      author=quotes["Author"][pos_arr[0]]
-    else:
-      rnd=random.choice(pos_arr)
-      quote= quotes["List"][rnd]
-      author=quotes["Author"][rnd]
+    #if(len(pos_arr)==1) :
+   #   quote=quotes["List"][pos_arr[0]]
+    #  author=quotes["Author"][pos_arr[0]]
+   # else:
+    rnd=random.choice(pos_arr)
+    quote= quotes["List"][rnd]
+    author=quotes["Author"][rnd]
         
 if(selected_choice=='Quote'):
   with st.spinner(text='Loading the perfect Quote for you . . .'):
@@ -65,4 +65,8 @@ if(selected_choice=='Quote'):
  
 st.header('How well did the quote match your mood?')
 feedback=st.slider('Pick', 0, 5)
+
+'''if(feedback==5):
+  quotes.loc[rnd, 'Name'] = 'SHIV CHANDRA'
+  quotes.to_csv("AllDetails.csv", index=False)'''
 
