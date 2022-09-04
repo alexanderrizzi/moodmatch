@@ -52,6 +52,7 @@ if(dict1[selected_mood]<22):
     #st.text(arr)
     if(len(pos_arr)==1): quote= quotes["List"][pos_arr[0]]    
     else: 
+        st.text("your rand sucks")
         rnd=random.randint(1,len(pos_arr))
         quote= quotes["List"][rnd]
         
