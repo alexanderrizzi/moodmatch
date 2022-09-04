@@ -11,8 +11,8 @@ moods = ['Happy','Sad','Disgust','Afraid','Angry','Grateful','Nostalgic','Empath
 selected_mood = st.selectbox('Choose', moods)
 
 
-#st.header('Would you rather like a song or a quote?')
-#selected_choice = st.selectbox('Pick', ['Song','Quote'])
+st.header('Would you rather like a song or a quote?')
+selected_choice = st.selectbox('Pick', ['Song','Quote'])
 
 quotes=pd.read_csv('quotesDB.csv')
   
@@ -56,7 +56,8 @@ if(dict1[selected_mood]<22):
     rnd=random.choice(pos_arr)
     quote= quotes["List"][rnd]
     author=quotes["Author"][rnd]
-        
+    
+ if(selected_choice=='Quote'):
   with st.spinner(text='Loading the perfect Quote for you . . .'):
    time.sleep(2)
   st.header('"'+quote+'"')
