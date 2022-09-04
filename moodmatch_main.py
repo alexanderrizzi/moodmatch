@@ -47,9 +47,14 @@ if(dict1[selected_mood]<22):
         del_arr.append(i)
     pos_arr=np.delete(pos_arr,del_arr)
     rating_arr=rating_arr[rating_arr==max]
-    #st.text(pos_arr) 
-    rnd=random.choice(pos_arr)
-    quote= quotes["List"][rnd]
+    
+    if(len(pos_arr)==1) :
+      quote=quotes["List"][pos_arr[0]]
+      author=quotes["Author"][pos_arr[0]]
+    else:
+      rnd=random.choice(pos_arr)
+      quote= quotes["List"][rnd]
+      author=quotes["Author"][rnd]
         
 if(selected_choice=='Quote'):
   with st.spinner(text='Loading the perfect Quote for you . . .'):
