@@ -34,18 +34,23 @@ dict1 = {
 
 if(dict1[selected_mood]<22):
     max=-math.inf
-    arr=np.zeros(6)
+    rating_arr=np.zeros[6]
+    pos_arr=np.zeros[6]
     for i in range(0,6):
         if(int(quotes["Rating"][i][dict1[selected_mood]]) >= max):
             st.text(quotes["Rating"][i][dict1[selected_mood]])
             max=int(quotes["Rating"][i][dict1[selected_mood]])
-            arr[i]=i
-    st.text(max) 
+            rating_arr[i]=int(quotes["Rating"][i][dict1[selected_mood]])
+            pos_arr[i]=i
+    #st.text(max) 
+    for i in rating_arr:
+      if(rating_arr[i]!=max) : 
+        pos_arr=np.delete(pos_arr,i)
     arr=arr[arr==max]
-    st.text(arr)
-    if(len(arr)==1): quote= quotes["List"][arr[0]]    
+    #st.text(arr)
+    if(len(pos_arr)==1): quote= quotes["List"][arr[0]]    
     else: 
-        rnd=random.randint(1,len(arr))
+        rnd=random.randint(1,len(pos_arr))
         quote= quotes["List"][rnd]
         
 if(selected_choice=='Quote'):
