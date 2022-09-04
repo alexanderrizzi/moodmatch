@@ -42,13 +42,13 @@ if(dict1[selected_mood]<22):
             max=int(quotes["Rating"][i][dict1[selected_mood]])
             rating_arr[i]=int(quotes["Rating"][i][dict1[selected_mood]])
             pos_arr[i]=i
-    st.text(max) 
+    #st.text(max) 
     for i in range(0,len(rating_arr)):
       if(rating_arr[i]!=max) : 
         del_arr.append(i)
     pos_arr=np.delete(pos_arr,del_arr)
     #rating_arr=rating_arr[rating_arr==max]
-    st.text(pos_arr)
+    #st.text(pos_arr)
     if(len(pos_arr)==1) :
       quote=quotes["List"][pos_arr[0]]
       author=quotes["Author"][pos_arr[0]]
@@ -61,7 +61,8 @@ if(selected_choice=='Quote'):
   with st.spinner(text='Loading the perfect Quote for you . . .'):
    time.sleep(2)
   st.subheader(quote)
-  #st.subheader('---')
+  st.subheader('--')
+  st.subheader(author)
  
 st.header('How well did the quote match your mood?')
 
