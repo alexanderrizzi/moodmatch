@@ -50,9 +50,9 @@ if(dict1[selected_mood]<22):
     pos_arr=np.delete(pos_arr,del_arr)
     rating_arr=rating_arr[rating_arr==max]
     #st.text(arr)
+    st.text(pos_arr)
     if(len(pos_arr)==1): quote= quotes["List"][pos_arr[0]]    
     else: 
-        st.text("your rand sucks")
         rnd=random.randint(0,len(pos_arr))
         quote= quotes["List"][rnd]
         
