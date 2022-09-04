@@ -64,4 +64,5 @@ if(selected_choice=='Quote'):
   st.subheader('-- ' + author)
  
 st.header('How well did the quote match your mood?')
+feedback=st.slider('Pick', 0, 5)
 
