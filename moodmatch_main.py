@@ -49,10 +49,7 @@ if(dict1[selected_mood]<22):
     pos_arr=np.delete(pos_arr,del_arr)
     #rating_arr=rating_arr[rating_arr==max]
     #st.text(pos_arr)
-    #if(len(pos_arr)==1) :
-   #   quote=quotes["List"][pos_arr[0]]
-    #  author=quotes["Author"][pos_arr[0]]
-   # else:
+    
     rnd=random.choice(pos_arr)
     quote= quotes["List"][rnd]
     author=quotes["Author"][rnd]
@@ -62,11 +59,18 @@ if(selected_choice=='Quote'):
    time.sleep(2)
   st.header('"'+quote+'"')
   st.subheader('-- ' + author)
- 
+  
+time.sleep(2)
+
 st.header('How well did the quote match your mood?')
 feedback=st.slider('Pick', 0, 5)
 
-'''if(feedback==5):
-  quotes.loc[rnd, 'Name'] = 'SHIV CHANDRA'
-  quotes.to_csv("AllDetails.csv", index=False)'''
-
+if(feedback>2):
+  updated_rating=int(quotes["Rating"][i][dict1[selected_mood]] + feedback/5
+  quotes.loc[rnd, 'Rating'] = updated_rating
+  quotes.to_csv("AllDetails.csv", index=False)
+ 
+else:
+  updated_rating=int(quotes["Rating"][i][dict1[selected_mood]] - feedback/5
+  quotes.loc[rnd, 'Rating'] = updated_rating
+  quotes.to_csv("AllDetails.csv", index=False)
