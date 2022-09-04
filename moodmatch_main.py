@@ -60,7 +60,7 @@ if(selected_choice=='Quote'):
   with st.spinner(text='Loading the perfect Quote for you . . .'):
    time.sleep(2)
   st.subheader(quote)
-  st.subheader('---')
+  #st.subheader('---')
  
 st.header('How well did the quote match your mood?')
 
