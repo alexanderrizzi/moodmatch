@@ -41,7 +41,7 @@ if(dict1[selected_mood]<22):
             max=int(quotes["Rating"][i][dict1[selected_mood]])
             rating_arr[i]=int(quotes["Rating"][i][dict1[selected_mood]])
             pos_arr[i]=i
-    #st.text(max) 
+    st.text(max) 
     for i in range(0,len(rating_arr)):
       if(rating_arr[i]!=max) : 
         del_arr.append(i)
