@@ -38,8 +38,6 @@ if(dict1[selected_mood]<22):
     pos_arr=np.zeros(6)
     del_arr=[]
     for i in range(0,6):
-        if(int(quotes["Rating"][i][dict1[selected_mood]]) >= max):
-            st.text(quotes["Rating"][i][dict1[selected_mood]])
             max=int(quotes["Rating"][i][dict1[selected_mood]])
             rating_arr[i]=int(quotes["Rating"][i][dict1[selected_mood]])
             pos_arr[i]=i
