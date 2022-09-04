@@ -36,6 +36,7 @@ if(dict1[selected_mood]<22):
     max=-math.inf
     rating_arr=np.zeros(6)
     pos_arr=np.zeros(6)
+    del_arr=[]
     for i in range(0,6):
         if(int(quotes["Rating"][i][dict1[selected_mood]]) >= max):
             st.text(quotes["Rating"][i][dict1[selected_mood]])
@@ -45,7 +46,8 @@ if(dict1[selected_mood]<22):
     #st.text(max) 
     for i in range(0,len(rating_arr)):
       if(rating_arr[i]!=max) : 
-        pos_arr=np.delete(pos_arr,i)
+        del_arr.append(i)
+    pos_arr=np.delete(pos_arr,del_arr)
     rating_arr=rating_arr[rating_arr==max]
     #st.text(arr)
     if(len(pos_arr)==1): quote= quotes["List"][pos_arr[0]]    
