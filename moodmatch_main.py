@@ -67,7 +67,7 @@ feedback=st.slider('Pick', 0, 5)
 
 if(feedback>2):
   updated_rating=int(quotes["Rating"][i][dict1[selected_mood]] + feedback/5
-  quotes.loc[rnd, 'Rating'] = updated_rating
+  quotes.loc[[rnd, 'Rating']] = updated_rating
   quotes.to_csv("AllDetails.csv", index=False)
  
 else:
