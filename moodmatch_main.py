@@ -57,7 +57,6 @@ if(dict1[selected_mood]<22):
     quote= quotes["List"][rnd]
     author=quotes["Author"][rnd]
         
-if(selected_choice=='Quote'):
   with st.spinner(text='Loading the perfect Quote for you . . .'):
    time.sleep(2)
   st.header('"'+quote+'"')
